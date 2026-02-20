@@ -65,11 +65,9 @@ public class Principal {
             return;
         }
 
-        // Pega o primeiro resultado da lista
         DadosLivro dadosLivro = dados.resultados().get(0);
         Livro livro = new Livro(dadosLivro);
 
-        // Lógica para salvar Autor e Livro vinculados
         if (!dadosLivro.autores().isEmpty()) {
             DadosAutor dadosAutor = dadosLivro.autores().get(0);
             Autor autor = autorRepository.findByNome(dadosAutor.nome());
